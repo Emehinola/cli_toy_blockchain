@@ -103,7 +103,7 @@ impl Chain {
 
         block.transactions.push(reward_trans);
         block.transactions.append(&mut self.current_transactions);
-        block.count = self.current_transactions.len() as u32;
+        block.count = block.transactions.len() as u32;
         block.header.merkle = Chain::get_merkle(block.transactions.clone());
         Chain::proof_of_work(&mut block.header);
 

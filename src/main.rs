@@ -27,7 +27,7 @@ fn main() {
     let mut chain = Chain::new(miner_addr.trim().to_string(), diff);
 
     loop {
-        println!("Menu");
+        println!("\nMenu");
         println!("1) New Transaction");
         println!("2) Mine New Block");
         println!("3) Change Difficulty");
@@ -42,7 +42,7 @@ fn main() {
 
         match choice.trim().parse().unwrap() {
             0 => {
-                println!("Exiting...");
+                println!("...Exiting");
                 process::exit(0);
             },
             1 => {
